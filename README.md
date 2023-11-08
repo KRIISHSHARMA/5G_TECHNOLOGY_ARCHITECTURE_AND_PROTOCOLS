@@ -75,7 +75,9 @@
   - FR2 24250-52600MHz
 - `Below 1 GHz` : excellent in building penetration `(great for large area cells)` , wide area coverage tens of km , limited spectrum availability 
 - `1-6 GHz` : good coverage and good spectrum
-- `6-100 GHZ (mmWave)` : low range (coverage inversely prop to frequency) , but a lot of bandwidth , effected by building penetration , `good for small cells` 
+- `6-100 GHZ (mmWave)` : low range (coverage inversely prop to frequency) , but a lot of bandwidth , effected by building penetration , `good for small cells` , smaller antennas (size of antennas inversely prop to frequency) , high directivity 
+
+### OFDMA and flexible Numerology in 5G  
 
 
 
