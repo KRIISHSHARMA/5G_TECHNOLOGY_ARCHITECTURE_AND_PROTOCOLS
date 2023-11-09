@@ -2,7 +2,7 @@
 
 ## [ACRONYMS](ACRONYMS.md)
 
-## INTRODUCTION [module 1](introduction.md)
+## INTRODUCTION [module 1](INTRO.md)
 
 ## standardization of 5G 
 - ITR-R (international telecommunication union - radiocommunication) responsible to develop 5G requirements
@@ -34,7 +34,7 @@
 
 ![Screenshot from 2023-11-07 19-37-22](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/a64d9f7b-3f8e-47ef-97b2-4ae868b72d86)
 
-## MOVING FROM 4G TO 5G [module 2](moving_from_4G _to_5G)
+## MOVING FROM 4G TO 5G [module 2](MOVING_FROM_4G_TO_5G.md)
 
 ## 5G architecture 
 - 3 main components :
@@ -50,7 +50,7 @@
 
 - importance of NSA in 5G architecture : cost effective , without fullfledged 5G deployment they can still get many benefits of 5G network in NAS by using gNB , faster deployment
 
-## KEY TECHNOLOGIES OF 5G [module 3](key_tech_of_5G)
+## KEY TECHNOLOGIES OF 5G [module 3](KEY_TECH_OF_5G.md)
 ## Dual connectivity (DC)
 - LTE  eNB connected to EPC
 - enhanced eNB connected to 5G Core
@@ -145,7 +145,7 @@
 ![Screenshot from 2023-11-09 19-32-32](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/4511e3e4-5a58-45f8-a383-2a645482f7bb)
 ![Screenshot from 2023-11-09 19-34-05](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/0661b964-69f4-4cac-b972-437ee92ea4dd)
 
-## MASSIVE MIMO AND BEAMFORMING [MODULE4](
+## MASSIVE MIMO AND BEAMFORMING [MODULE4](mMIMO_AND_BEAMFORMING.md)
 ## beamforming and beam steering
 - large number of antennas work together to improve both coverage and also increase data rate
 - terms mMIMO and beamforming are often used interchangeably
