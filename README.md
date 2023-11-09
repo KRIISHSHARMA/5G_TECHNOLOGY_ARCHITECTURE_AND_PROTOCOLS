@@ -2,7 +2,7 @@
 
 ## [ACRONYMS](ACRONYMS.md)
 
-## INTRODUCTION [module 1]
+## INTRODUCTION [module 1](introduction.md)
 
 ## standardization of 5G 
 - ITR-R (international telecommunication union - radiocommunication) responsible to develop 5G requirements
@@ -34,9 +34,9 @@
 
 ![Screenshot from 2023-11-07 19-37-22](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/a64d9f7b-3f8e-47ef-97b2-4ae868b72d86)
 
-## MOVING FROM 4G TO 5G [module 2]
+## MOVING FROM 4G TO 5G [module 2](moving_from_4G _to_5G)
 
-### 5G architecture 
+## 5G architecture 
 - 3 main components :
   - UE
   - NG-RAN (next gen radio access network)
@@ -50,9 +50,8 @@
 
 - importance of NSA in 5G architecture : cost effective , without fullfledged 5G deployment they can still get many benefits of 5G network in NAS by using gNB , faster deployment
 
-## [module 3]
-## key features of NG RAN or 5G RAN
-### Dual connectivity (DC)
+## KEY TECHNOLOGIES OF 5G [module 3](key_tech_of_5G)
+## Dual connectivity (DC)
 - LTE  eNB connected to EPC
 - enhanced eNB connected to 5G Core
 - 5G gNB connected to 5G core
@@ -60,7 +59,7 @@
 - bearer splitting(some data to UE , some to another nodeB etc)  can take place at either of the nodeB's
  ![Screenshot from 2023-11-08 18-47-46](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/e313a7de-52e3-474c-9aca-67f38f7b9b14)
 
-### small cells in 5G networks
+## small cells in 5G networks
 - small cells directly related to DC
 - have 5G air interface but limited coverage (10m - 2km)
 - less channel impairments due to small coverage size 
@@ -69,7 +68,7 @@
   - used in DC to increase user data rate
 ![Screenshot from 2023-11-08 18-50-34](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/31f4c3c0-4e72-447d-8e88-e4f11910f6b5)
  
-### increased wireless spectrum 
+## increased wireless spectrum 
 - 5G NR can operate in 2 frequency ranges
   - FR1 450-6000MHZ
   - FR2 24250-52600MHz
@@ -77,7 +76,7 @@
 - `1-6 GHz` : good coverage and good spectrum
 - `6-100 GHZ (mmWave)` : low range (coverage inversely prop to frequency) , but a lot of bandwidth , effected by building penetration , `good for small cells` , smaller antennas (size of antennas inversely prop to frequency) , high directivity 
 
-### OFDMA and flexible Numerology in 5G  
+## OFDMA and flexible Numerology in 5G  
 - 5G NR uses OFDMA as in 4G
 - But 5G has a wide frequency range
 - as frequency increases interfrequency interference due to doppler shift and phase error increases
@@ -112,18 +111,18 @@
 - `14 OFDM symbols per slot (normal cp)`
 - `12 OFDM symbols per slot  (normal cp)`
 
-### RESOURCE BLOCK
+## RESOURCE BLOCK
 - it is defined only for s frequency domain
 - `a resource block is defined as 12 conseutive subcarriers in the frequency domain`
 - LTE is defined in both freq and time domain
 - resource block is only defined in freq domain cause in time domain as the scs is increased the duration of time slot is decreased
-### RESOURCE ELEMENT
+## RESOURCE ELEMENT
 - smallest unit made up of
   - `one subcarrier in frequency domain and`
   - `one OFDM symbol in time domain` 
 ![Screenshot from 2023-11-09 19-09-59](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/8ada15e2-c3cb-46e4-ac5e-521f5294c883)
 
-### MODULATION in 5G
+## MODULATION in 5G
 - under favourible wireless channel (near base station)
   - 5G can use up to 256QAM (quadrature amplitude modulation)
   - `8 bits/symbol` {log2 (256)}
