@@ -109,16 +109,42 @@
 
 ![Screenshot from 2023-11-09 10-01-10](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/1d682ab6-f472-4b9c-8e30-ef0ca01098da)
 
-- 14 OFDM symbols per slot (normal cp)
-- 12 OFDM symbols per slot  (normal cp)
+- `14 OFDM symbols per slot (normal cp)`
+- `12 OFDM symbols per slot  (normal cp)`
 
+### RESOURCE BLOCK
+- it is defined only for s frequency domain
+- `a resource block is defined as 12 conseutive subcarriers in the frequency domain`
+- LTE is defined in both freq and time domain
+- resource block is only defined in freq domain cause in time domain as the scs is increased the duration of time slot is decreased
+### RESOURCE ELEMENT
+- smallest unit made up of
+  - `one subcarrier in frequency domain and`
+  - `one OFDM symbol in time domain` 
+![Screenshot from 2023-11-09 19-09-59](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/8ada15e2-c3cb-46e4-ac5e-521f5294c883)
 
+### MODULATION in 5G
+- under favourible wireless channel (near base station)
+  - 5G can use up to 256QAM (quadrature amplitude modulation)
+  - `8 bits/symbol` {log2 (256)}
+- lower modulation as the link detriorates
+  - 64QAM (6bits/symbol) , 16QAM (4bits/symbol) etc
 
+### CLOUD RAN 
+- 2 main components
+  - centralized unit (CU) : performs much of processing for large number of decentralizrd units
+  - can be connected to multiple DU
+  - typically resides in central office (edge computing)
+    - handles computationally demanding tasks
+      1. scheduling
+      2. security
+      3. power management
+  - distributed unit (DU) : radio transmit/recive capability only
+    - connected to one CU
+    - near basestation 
 
-
-
-
-
+![Screenshot from 2023-11-09 19-32-32](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/4511e3e4-5a58-45f8-a383-2a645482f7bb)
+![Screenshot from 2023-11-09 19-34-05](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/0661b964-69f4-4cac-b972-437ee92ea4dd)
 
 
 
