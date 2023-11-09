@@ -78,12 +78,39 @@
 - `6-100 GHZ (mmWave)` : low range (coverage inversely prop to frequency) , but a lot of bandwidth , effected by building penetration , `good for small cells` , smaller antennas (size of antennas inversely prop to frequency) , high directivity 
 
 ### OFDMA and flexible Numerology in 5G  
+- 5G NR uses OFDMA as in 4G
+- But 5G has a wide frequency range
+- as frequency increases interfrequency interference due to doppler shift and phase error increases
+- solution => use scalable carrier spacing
+-  OFDM(Orthogonal Frequency Division Multiplexing) is an efficient modulation technique in which a wide frequency band is split into many small frequencies, known as subcarriers, and transmitted so that they overlap each other but do not influence other subcarriers. These subcarriers are orthogonal to each other which means the peak point of a sub-carrier occurs at the NULL point of others such that the resources can be used with maximum efficiency.
+-  to overcome the problem of a symbol overlaping another , a time gap is introduced between every 2 symbols. But leaving the space empty like turning off the transmission, would cause problems for the amplifier. So, to encounter this, a CP(Cyclic Prefix) is introduced in the space.
+- Cyclic Prefix is of 2 types -
+
+  Normal CP - In Normal CP, the slot is divided into 14/7 symbols based on 
+  slot configuration. The normal CP length is designed to support 
+  propagation conditions with a delay spread up to 4.7 μs.
+
+  Extended CP - The slot is divided into 12/6 OFDM symbols based on slot 
+  configuration in the case of extended CP. This is intended to support 
+  deployments where the delay spread is up to 16.7 μs. This is only 
+  supported for the μ value 2 i.e. 60KHz SCS.
 
 
 
+![Screenshot from 2023-11-09 09-53-01](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/a71b18fe-7509-4fec-a37c-d4c60dbdef0b)
 
+![Screenshot from 2023-11-09 09-54-15](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/31a647a4-020f-4ab2-9248-7760e030ff10)
 
+![Screenshot from 2023-11-09 09-55-05](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/d8107a4a-0020-4919-be12-29fd3b158b1d)
 
+![Screenshot from 2023-11-09 09-58-24](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/216a6eda-eb84-47e2-9ab0-76628a21ebbc)
+
+![Screenshot from 2023-11-09 10-00-40](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/213c6df5-ca0c-4dde-a71e-40c2460c9577)
+
+![Screenshot from 2023-11-09 10-01-10](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/1d682ab6-f472-4b9c-8e30-ef0ca01098da)
+
+- 14 OFDM symbols per slot (normal cp)
+- 12 OFDM symbols per slot  (normal cp)
 
 
 
