@@ -217,7 +217,7 @@
   - more nodes to hadle data traffic
 ![Screenshot from 2023-11-10 10-02-52](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/52150bae-ade8-4c95-acb6-3ec9b6c6fd0d)
 
-## 5G CORE NETWORK[module 6](
+## 5G CORE NETWORK[module 6](5G_CORE_NETWORK.md)
 ## AMF 
 - manages UE registration
 - initiates authenttication
