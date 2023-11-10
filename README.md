@@ -320,7 +320,17 @@
 - scale up or scale down resources as per requirement
   - scale up AMF capacity in minutes using MANO
 
-
+## 5G network slicing 
+- 5G network slicing enables service providers to build virtual E2E networks tailored to application requirements
+- NFV will enable network slicing
+  - allows creation of multiple virtual networks on shared physical infrasturcture
+- virtual networks are isolated in the control plane and user plane
+- user experiences them as a physically seperate networks
+- slicing crucial in 5G because of different Qos requirements for multitude of services
+  - eg : low latency powerful mobile broadband
+- capabilities of slice optimised for one use case
+- on demand allocation of resources 
+![Screenshot from 2023-11-10 17-43-25](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/4595722c-03d9-4238-a2ac-50e13de22891)
 
 
 
