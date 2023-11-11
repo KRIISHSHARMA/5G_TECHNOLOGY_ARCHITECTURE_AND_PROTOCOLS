@@ -397,7 +397,7 @@
 - **TAI**(tracking area identity)
   - TAI = MCC,MNC,TAC(TA code)
 
-## 
+## [PROCEDURES_IN_5GN_NETWORK](PROCEDURES_IN_5G_NETWORK.md)
 
 ## UE power on procedure
 - in the acquisition pocedure , the UE discovers nearby cells by reading their PSS and SSS (primary/secondary synchronization sequences)
@@ -467,22 +467,52 @@
  - 5G-S-TMSI used for communication
  - UE location known to cell level
 
+## PDU session establishment
+- once the mobile has registered itself to the network then wants to avail some data service of network , this device will generate PDU session establishment request
+- then AMF will notify SMF to perform policy check for this request
+- PCF will then do a policy check
+- PCF will determine whether the device can use the services or not
+- if the check is positive the SMF will coordinates with AMF and UPF to establish user data PDU session 
 
+![Screenshot from 2023-11-11 20-36-46](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/014d7405-c715-4574-aa14-7914d9a9563d)
 
+## UE paging procedure 
+![Screenshot from 2023-11-11 20-39-12](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/d9b60c50-7656-4cb3-82d9-54967d3897ba)
 
+- this paging message will contain TMSI of the mobile whose call is incoming , this device will message and respond to this message after which
+PDU session can be established for the downlink transfer of this data 
 
+## tracking area update procedure
 
+![Screenshot from 2023-11-11 20-43-59](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/8786ea12-eb04-4889-bccb-a74c792da282)
 
+## handovers in 5G 
+- handovers always take place when
+  - UE is in a connected state during a call
+- the network decides a device switched from one cell to the next
+- two mechanisms of handover in 5G
+  - Xn handover
+  - N2 handover
 
+## Xn handover
+1. handover coordinattion : security info, PDU session info
+2. device connected to new cell
+3. AMF request to switch PDU session
+4. AMF will then request SMF to generate this switch
+5. SMF will ask UPF to change from souce gNB to target gNB 
+6. new PDU session path established 
 
+![Screenshot from 2023-11-11 20-49-16](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/293eb5e3-c6c7-43fa-b85d-7fcb052ec0a2)
 
+## N2 handover ( no connection between source and target gNB directly only using AMF{AMF acts as middleman})
+1. AMF starts handover coordination
+2. device connected to new cell
+3. AMF request to switch PDU session
+4. AMF will then request SMF to generate this switch
+5. SMF will ask UPF to change from souce gNB to target gNB 
+6. new PDU session path established 
 
-
-
-
-
-
-
+![Screenshot from 2023-11-11 20-54-32](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/b4c4cbe7-b376-4753-a6ef-ef310fe30127)
 
 
 
