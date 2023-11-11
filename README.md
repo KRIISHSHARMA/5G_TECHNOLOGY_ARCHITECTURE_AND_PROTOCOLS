@@ -397,20 +397,75 @@
 - **TAI**(tracking area identity)
   - TAI = MCC,MNC,TAC(TA code)
 
+## 
 
+## UE power on procedure
+- in the acquisition pocedure , the UE discovers nearby cells by reading their PSS and SSS (primary/secondary synchronization sequences)
+- if it is a primary cell
+  - then the cell broadcast system information (on PBCH) which decribes cell configuration and PLMN-ID
+- if no system info
+  - cell is ignored 
 
+![Screenshot from 2023-11-11 18-21-29](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/0a0bf7e8-0a27-4f3f-abef-50fd368e5b6e)
+![Screenshot from 2023-11-11 18-21-50](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/f59a0ab3-5db8-44ed-8655-5be126a47264)
+![Screenshot from 2023-11-11 18-22-20](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/6b710161-e0b4-4f35-868c-2b59c76544be)
+![Screenshot from 2023-11-11 18-23-09](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/c1cee187-9f8e-4198-a137-710f865934eb)
 
+- **establish securtiy**
+  - security based on process termed 5G AKA (authentication and key agreement)
+  - AKA relies on the shared secret key ; the
+    - USIM stores one copy
+    - the UDM stores the other
+  - secret key used for mutual authenticaion
+    - both the device and th network authenticate one another 
 
+  - all signalling between the device and the network encrypted
+    - UE and AMF
+    - UE and gNB
 
+![Screenshot from 2023-11-11 18-27-26](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/9b0d70fc-efd2-440f-ad64-6a8e5254b605)
 
+- **UE context installation**
+  - every valid subscriber has a subscriber profile stored in UDM
+  - this profile defines
+    - allowed Data network connection
+    - Qos
+    - Bandwidth
+    - roaming
+    - subscriber status 
 
+![Screenshot from 2023-11-11 18-29-47](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/c3f88258-eeb5-40ec-ab7c-d230ac845e2f)
 
+- **UE Policy check**
+ - AMF performs a policy cjeck with the PCF
+ - policy decisions influenced by
+   - the time of day
+   - location of the user
+   - network congestion etc
+  - policy check necessary
+    - if subscriber can acess the network in these connection
 
+![Screenshot from 2023-11-11 18-32-05](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/9673eb13-7790-43a2-9406-630f5ccbb13f)
 
+- **5G-S-TMSI allocation**
+  - finally temporary ID allocated to the subscriber
+  - this 5G-S-TMSI is created by the AMF
+  - used for until the device isallocated
+    - potentially due to an AMF change 
 
+![Screenshot from 2023-11-11 18-34-59](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/e8abba56-db60-4605-a600-0bbf92499128)
 
+## UE idle and connected modes
+- **idle mode**
+  - UE location known to TA level(doesnt know exactly which cell)
+  - UE is  camping on a cell
+  - UE listens to paging(whenever there is an incomig call for this device , the network will page all the mobile in TA in which mobile is located)
+  - UE paged using 5G-S-TMSI(the paging message will contain the TMSI of the device , device will respond to the network and the network will know the current cell of the device)
 
-
+- **connected mode**
+ - UE is actively exchanging voice or data with network
+ - 5G-S-TMSI used for communication
+ - UE location known to cell level
 
 
 
