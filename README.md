@@ -332,7 +332,7 @@
 - on demand allocation of resources 
 ![Screenshot from 2023-11-10 17-43-25](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/4595722c-03d9-4238-a2ac-50e13de22891)
 
-## [REMAINING FUNCTIONS](
+## [REMAINING FUNCTIONS](REMAINING_FUNCTIONS.md)
 
 ## NRF (network repository function)
 - maintains profiles of network functions
