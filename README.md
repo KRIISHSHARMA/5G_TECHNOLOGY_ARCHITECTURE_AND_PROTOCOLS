@@ -2,7 +2,7 @@
 
 ## [ACRONYMS](ACRONYMS.md)
 
-## INTRODUCTION [module 1](INTRO.md)
+## [INTRODUCTION](INTRO.md)
 
 ## standardization of 5G 
 - ITR-R (international telecommunication union - radiocommunication) responsible to develop 5G requirements
@@ -34,7 +34,7 @@
 
 ![Screenshot from 2023-11-07 19-37-22](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/a64d9f7b-3f8e-47ef-97b2-4ae868b72d86)
 
-## MOVING FROM 4G TO 5G [module 2](MOVING_FROM_4G_TO_5G.md)
+## [MOVING FROM 4G TO 5G](MOVING_FROM_4G_TO_5G.md)
 
 ## 5G architecture 
 - 3 main components :
@@ -50,7 +50,7 @@
 
 - importance of NSA in 5G architecture : cost effective , without fullfledged 5G deployment they can still get many benefits of 5G network in NAS by using gNB , faster deployment
 
-## KEY TECHNOLOGIES OF 5G [module 3](KEY_TECH_OF_5G.md)
+## [KEY TECHNOLOGIES OF 5G](KEY_TECH_OF_5G.md)
 ## Dual connectivity (DC)
 - LTE  eNB connected to EPC
 - enhanced eNB connected to 5G Core
@@ -145,7 +145,7 @@
 ![Screenshot from 2023-11-09 19-32-32](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/4511e3e4-5a58-45f8-a383-2a645482f7bb)
 ![Screenshot from 2023-11-09 19-34-05](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/0661b964-69f4-4cac-b972-437ee92ea4dd)
 
-## MASSIVE MIMO AND BEAMFORMING [MODULE4](mMIMO_AND_BEAMFORMING.md)
+## [MASSIVE MIMO AND BEAMFORMING](mMIMO_AND_BEAMFORMING.md)
 ## beamforming and beam steering
 - large number of antennas work together to improve both coverage and also increase data rate
 - terms mMIMO and beamforming are often used interchangeably
@@ -181,7 +181,7 @@
 -  less interference 
 ![Screenshot from 2023-11-09 23-14-41](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/e3452f02-bd39-4b71-9ae8-a1965f66d901)
 
-## 5G NETWORK ARCHITECTURE[module 5](5G_NETWORK_ARCHITECTURE.md)
+## [5G NETWORK ARCHITECTURE](5G_NETWORK_ARCHITECTURE.md)
 ## 5G architecture gNB
 - radio transmission/reception
 - digital signal processing(encryption,data comporession)
@@ -217,7 +217,7 @@
   - more nodes to hadle data traffic
 ![Screenshot from 2023-11-10 10-02-52](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/52150bae-ade8-4c95-acb6-3ec9b6c6fd0d)
 
-## 5G CORE NETWORK[module 6](5G_CORE_NETWORK.md)
+## [5G CORE NETWORK](5G_CORE_NETWORK.md)
 ## AMF 
 - manages UE registration
 - initiates authenttication
@@ -278,7 +278,7 @@
 - eg AF can be an IMS(IP MULTIMEDIA SUBSYSTEM , used to generate voice calls over IP) node
   - requesting voice call
 
-## NFV[module7](NFV.md)
+## [NFV](NFV.md)
 ## network function virtualization(NFV)
 - problem with traditional mobile networks
   - network nodes implemented as special purpose hardware
@@ -331,6 +331,160 @@
 - capabilities of slice optimised for one use case
 - on demand allocation of resources 
 ![Screenshot from 2023-11-10 17-43-25](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/4595722c-03d9-4238-a2ac-50e13de22891)
+
+## [REMAINING FUNCTIONS](
+
+## NRF (network repository function)
+- maintains profiles of network functions
+- receives discovery request of NF
+  - returns IP addresses/domain names of servers for that NF
+
+![Screenshot from 2023-11-11 14-10-27](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/01c3db81-f7ad-4151-ba53-2a0f3bd0c208)
+
+## NSSF (network slice selection function)
+- invoked during registration
+  - if need to reselect an AMF for a particular service
+- NSSF returns
+  - network slice
+  - AMF for that service
+- new to 5G 
+
+## NEF(network exposure function)
+- exposes the capabilities of 5G core network functions to an external AF
+- ensures that the communications take place securely :
+  - may authenticate and authorize AF throttle the rate of info transfer
+- acts as middle man for info exchanged b//w 5GC and AF
+- AF might notbe authorized to communicate with other NF's in 5GC 
+
+![Screenshot from 2023-11-11 14-17-34](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/6e33a16b-4da0-4cca-8934-e153c5fc401e)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
