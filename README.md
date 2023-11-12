@@ -514,28 +514,79 @@ PDU session can be established for the downlink transfer of this data
 
 ![Screenshot from 2023-11-11 20-54-32](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/b4c4cbe7-b376-4753-a6ef-ef310fe30127)
 
+## [
 
+## 5G sevice based architecture
+- service based arch introduced to increase modularity
+- a NETWORK FUNCTION provides one or more servicrs to other network functions in the network
+- these services are made available over service based interfaces of network funtion interface 
 
+![Screenshot from 2023-11-12 15-35-29](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/63471c27-926b-448f-856c-562a131ba2a6)
 
+## main mechanisms for NF services
+- request-reponse :
+  - NF service consumer requests a service
+  - NF service provider returns
+    - information to the consumer
+    - or performs an action , or both
+  - subscribe-notify :
+    - NF service consumer subscribes to provide service
+    - provider notifies the consumer about
+      - the occurrence of events or
+      - periodic updates related to the service
 
+![Screenshot from 2023-11-12 15-40-20](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/fbbdb362-b506-4166-a5c4-82aa42922d57)
 
+## HTTP/2 for 5G core network
+- HTTP/2 used for communication between NF's
+- easy deployment in cloud environment
+- HTTP/2 is already very widely deployed
+  - well developed security mechanisms , third party applications
+- easy integration of operatorand third-party applications
 
+##  HTTP/2 on web vs HTTP/2 in 5G Core
 
+![Screenshot from 2023-11-12 15-48-29](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/3889102b-d218-4ddc-829c-fe36d56a5522)
 
+- in 5G core request-response data only in JSON format 
 
+## JSON format
+``` bash
+{
+     "empid":"SRAETS",  #name-value pair
+     "personal":{
+           "name":"smithjones",
+           "gender":"male",
+           "age":23,
+           "address" :
+     {
+            "streetadd":A"efaeaegaegE",
+            "city":"afae",
+      }
+  }
+      "profile":{
+           "designation":"aefaef".
+          }
+}
+```
 
+## concept of resource
+- exmaple of reources
+  - PDU session
+    - context
+    -   QoS policy
+ - NF registration with NRF
+- resources located and manipulated as URI(uniform resouce identifier)
 
+![Screenshot from 2023-11-12 16-01-22](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/4948437d-e7d0-45a6-9a11-a5cff4b735f0)
 
+## HTTP methods used in 5GC 
+![Screenshot from 2023-11-12 16-03-08](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/504d08a0-cf68-4f68-8b6f-68b9b20a70b5)
 
+## HTTP reponses in 5G 
+![Screenshot from 2023-11-12 16-04-58](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/08e72f74-2f77-4ebf-9a09-e1e1d0368d35)
 
-
-
-
-
-
-
-
-
+## naming scheme for NF services
 
 
 
