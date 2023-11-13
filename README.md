@@ -610,23 +610,53 @@ PDU session can be established for the downlink transfer of this data
 ## Use case 2 : NF sevice discovery 
 ![Screenshot from 2023-11-12 16-37-36](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/7a18607f-7105-42c4-b5b9-6d7161268986)
 
+## [ESSENTIALS OF NETWORK SLICING](
 
+## What is network slicing ?
+- network slice is a logical network serving a defined customer consisting of all required network resources configured together 
+ - complete network within a provider
+ - resources optimized for one use case
+ - isolated but may share resoures
+ - user experience it is as a seperate network
+ - on demand allocation of resources 
 
+![Screenshot from 2023-11-13 20-54-13](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/72995930-ecbc-41ae-95fc-b42686c2f508)
 
+## example of network slicing in 5G 
 
+- slices using same AMF 
+![Screenshot from 2023-11-13 20-54-13](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/aaebe01b-0311-4b8e-8b7d-dc192bbfd85a)
 
+## S-NSSAI (single network slice selection assistance information)
+- a `network slice instance` (NSI) is identified by S-NSSAI
 
+![Screenshot from 2023-11-13 21-02-54](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/363d1994-8721-48da-99f3-68438e299474)
+ - SD is optional
+ - used to differentiate between different network slices used for different customers
 
+![Screenshot from 2023-11-13 21-05-29](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/d8e113a3-94cc-40a3-bdf0-b49216e202d8)
 
+- SST : can be 1,2,3,4,5-127,128-255
+- SD :  example there are two different eMBB slices that are allocated to two different users SD differentiates between these two eMBB using SD part 
 
+## NSSI (network slice subnet instance in 5G)
+- NSI is further composed of NSSI
 
+![Screenshot from 2023-11-13 21-11-49](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/3a0ce16a-ad8f-4a29-aa5d-e27fc3a24c58)
 
+- A NSI is composed of one ore multiple network slice subnet instances (NSSIs)
+- A NSSI may contain one or multiple virtualized network functions
+- A NSSI may
+  - consist NF(s) and other NSSI(s)
+  - be shared by 2 or more NSIs
+  - may contain core network functions or Access network functions or both 
 
-
-
-
-
-
+## multiple slices support
+- at one time , `maximum 8 slies` can be assigned to a single UE
+  - this UE must support PDU sessions associated with these slices
+- a common AMF instance supports all slices assigned to a UE
+  - but these slices can have separate SMF/UPF instances
+- a PDU session is assoiated with only one S-NSSAI and one DN(data betwork)
 
 
 
