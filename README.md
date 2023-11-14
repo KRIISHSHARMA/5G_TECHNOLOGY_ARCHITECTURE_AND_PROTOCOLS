@@ -761,3 +761,117 @@ PDU session can be established for the downlink transfer of this data
 ![Screenshot from 2023-11-13 22-12-39](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/9924f520-a08e-40d7-b5f5-454fc4e92c48)
 
 
+## [SECURITY_IN_5G](
+
+## 5G roaming architecture
+![Screenshot from 2023-11-14 11-02-51](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/8af9470b-0f67-4018-8d37-d4e698b7123d)
+
+- visiting UPF controlled by visting UPF , HOME UPF controlled SMF
+
+## logical entities for network access security
+- seperate logical entities for security defined to maintain a logical security architecture
+- contaibed within 5GC NFs
+- logical entities
+  - ARPF (AUTHENTICATION CREDENTIAL REPOSITORY AND PROCESSING FUNCTION)
+  - AUSF (AUTHENTICATION SERVER FUNCTION)
+  - SEAF (SECURITY ANCHOR FUNCTION)
+  - SIDF (SUBSCRIPTION IDENTIFIER DE-CONCEALING FUNCTION)
+
+![Screenshot from 2023-11-14 11-09-06](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/6e850ea2-b4f4-416a-9e30-be6955aacc0c)
+
+## SIDF(subscription identifier de-concealing funtion)
+- the SIDF is a service offered by the UDM NF in the home network
+- it is responsible for resolving the SUPI from the SUCI
+- responsible to deconceal SUCI 
+
+## AUSF(authentication server function)
+- defined as a standalone NF in the 5GC architecture
+- responsible for handling the authentication in the home network
+  - based on information received from the UE and UDM/ARPF
+
+## SEAF(seurity anchor function)
+- it is functionality provided by the AMF
+- responsible for handling the authentication in te serving(visited) network
+  - based on info received from UE and AUSF
+- `called a seruity anchor cause UE cannot directly communicate with the AUSF or AMF for its authentication`
+
+## ARPF (AUTHENTICATION CREDENTIAL REPOSITORY AND PROCESSING FUNCTION)
+- important
+- ARPF contains the subscirbers security credentials
+   - long-term/master key (K) 
+     - uses of master key:authentication , derivation of ciphering and integrity protection keys
+    - the subscription identifier SUPI
+- ARPF services are provided via the UDM
+   - no open interface defined between UDM and ARPF 
+
+## network access securtiy 
+- it comprises of all those functions that are related to the secure access of this UE to the network
+- mutual authentication
+  - UE and network confirm each other's identities 
+
+![Screenshot from 2023-11-14 11-28-36](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/207a583c-1c9a-46f9-bb6b-1fb353417140)
+
+- UE and network must support 2 authentication methods :
+  - `5G AKA (5G autentication and key agreement)`
+    - for 3GPP access (UE<==>gNB)
+  - EAP-AKA (extensivle authentication protocol - AKA)
+    - for non 3GPP access (WLAN device connected to WLAN access network)
+
+- one the authentication procedure is complete the ciphering and integrity protection keys are generated (ex UE when connected to AMF)
+- exceptions - emergency calls
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
