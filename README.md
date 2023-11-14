@@ -843,7 +843,7 @@ PDU session can be established for the downlink transfer of this data
 
 - once the authentication procedure has been initiated then UDM has the SUPI and based on the SUPI , UDM decides whether it has to use 5G AKA procedure or EAP-AKA procedure(we are looking at AKA)
 - the ARPF generates the 5G home environment authentication vector cause (AUSF and UDM are in hone network)
-- the response to the random number(XRES) is calculated using the MILENAGE FUNCTION and the input to the milenage function are sequence number , random number , Authentication manaegement field and the master key (K)
+- the expected response to the random number(XRES) is calculated using the MILENAGE FUNCTION and the input to the milenage function are sequence number , random number , Authentication manaegement field and the master key (K)
 -  this milenage function has 5 subfunctions :- `MAC(generates message authentication code)` , XRES(response to random number) , IK , AK
 
 ![Screenshot from 2023-11-14 17-19-30](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/cb0f8115-0224-4812-9db3-d8f82ffde458)
@@ -902,6 +902,135 @@ PDU session can be established for the downlink transfer of this data
 
 ## ciphering/integrity algo in 5G 
 ![Screenshot from 2023-11-14 18-34-22](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/41340453-dc58-4f99-9602-0ada7ebbd62a)
+
+## 5G EAP-AKA for non-3GPP access architecture 
+- used for authentication of non-3GPP devices if they want to connect to 5GCN 
+
+![Screenshot from 2023-11-14 18-37-19](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/6495d156-a4af-42ec-b13d-de23ab74360d)
+
+- instead of UE directly connecting to AMF it first connects to access point for WLAN  
+- In order to connect to 5GC will need protocol converison which is provided by `N3IWWF`(non-3GPP access interworking function)
+
+## 5G EAP-AKA(extensible authentication protocol - authentication and key agreement)
+- defiend by IETF in RFC 3748 is a protocol framework for
+  - authentication
+  - typically between an end-user device and a network
+- first introduced for the point to point (PPP)
+- EAP is not an authentication method per se but rather
+  - `a common authentication framework to impelement specific authentication methods`
+- `EAP is therefore "extensible" as it enables support for different authentication methods`
+- new authentication methods can be added
+- these authentication methods are typically referred as EAP methods 
+
+## 5G EAP-AKA' (subtype of 5G EAP-AKA)
+- it is for performing authentication based on USIM cards
+- UDM/ARPF will generate a transformed `authentication vector(AV')` and provide it ti the AUSF
+- the AV' consists of 5 parameters
+  - RAND (random number)
+  - XRES (expected result)
+  - AUTN (network authentication token)
+  - CK' and IK' (keys)
+
+![Screenshot from 2023-11-14 18-57-08](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/61e045d3-4bbf-4e76-b9f3-b060dba3c3cf)
+
+- UDM generate AV'(RAND,XRES,AUTN,CK',IK') which is given to AUSF
+- AUSF will keep XRES,CK'and IK' within itself and calculate the MAC(message authentication code) , generate K<sub>AUSF</sub> and from this will generate K<sub>SEAF</sub> and will keep  K<sub>SEAF</sub> in itself and forward RAND,AUTN,MAC to AMF
+-  AMF will challenge the ME using RAND,MAC,AUTN , ME will kepp MAC and forward RAND , AUTN to USIM
+-  USIM verifies the AUTN and derives the RES and keys(CK,IK) and forward it  to ME
+-  ME/UE verifes the MAC and derives  K<sub>SEAF</sub>, K<sub>AUSF</sub>, K<sub>AMF</sub>
+-  UE sends response to the challenge with RES , MAC '
+-  AMF then forwards the RES , AC to AUSF (*AMF just forwarding messages not calculating any hashes or doing any comparison*)
+-  AUSF compares RES with XRES and checks if ir is valid response if the value is correct it means its good , it also verifies MAC and finds them correct
+-  AUSF then sends  K<sub>SEAF</sub> to the AMF and AMF will then derive the  K<sub>AMF</sub> based on  K<sub>SEAF</sub> and will keep  K<sub>AMF</sub> with itself
+-  AMF then informs the UE that authenticaion was a success 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
