@@ -761,7 +761,7 @@ PDU session can be established for the downlink transfer of this data
 ![Screenshot from 2023-11-13 22-12-39](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/9924f520-a08e-40d7-b5f5-454fc4e92c48)
 
 
-## [SECURITY_IN_5G](
+## [SECURITY_IN_5G](SECURITY_IN_5G.md)
 
 ## 5G roaming architecture
 ![Screenshot from 2023-11-14 11-02-51](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/8af9470b-0f67-4018-8d37-d4e698b7123d)
@@ -944,7 +944,9 @@ PDU session can be established for the downlink transfer of this data
 -  AUSF then sends  K<sub>SEAF</sub> to the AMF and AMF will then derive the  K<sub>AMF</sub> based on  K<sub>SEAF</sub> and will keep  K<sub>AMF</sub> with itself
 -  AMF then informs the UE that authenticaion was a success 
 
+## 5G security key hierarchy for EAP-AKA (non-3GPP Access)
 
+![Screenshot from 2023-11-14 19-26-02](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/0e1dcc7e-0ca8-470b-a548-58e5ffcf69a2)
 
 
 
