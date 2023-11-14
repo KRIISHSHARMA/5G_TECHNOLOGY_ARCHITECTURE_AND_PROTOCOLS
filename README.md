@@ -814,51 +814,94 @@ PDU session can be established for the downlink transfer of this data
 - UE and network must support 2 authentication methods :
   - `5G AKA (5G autentication and key agreement)`
     - for 3GPP access (UE<==>gNB)
-  - EAP-AKA (extensivle authentication protocol - AKA)
+  - `EAP-AKA (extensivle authentication protocol - AKA)`
     - for non 3GPP access (WLAN device connected to WLAN access network)
 
 - one the authentication procedure is complete the ciphering and integrity protection keys are generated (ex UE when connected to AMF)
 - exceptions - emergency calls
 
+## initiation of authentication
+![Screenshot from 2023-11-14 16-54-51](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/2fda3f4e-b3be-49d1-9bf5-7811f4ede1f9)
 
+- based on SUPI , ARPF which type of authentication to be used (AKA or EKA-AKA)
 
+## concealement/deconcealement of SUPI 
+- 5G-GUTI is sent if the UE has a valid 5G-GUTI from a previous registration
+- if 5G-GUTI not available, SUPI needs to be used
+- SUPI is never sent in clear text over the air
+- a concealed version of SUPI called SUCI is used 
 
+- SUCI is created by the UE based on publi key cryptography and a protection scheme
+- `the HPLMN (UDM/SIDF) can derive the SUPI from the SUCI by using the home network private key` 
 
+![Screenshot from 2023-11-14 17-04-28](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/40a61871-9cf9-4d19-aa9b-5a0dd596989a)
 
+- MSIN (mobile subscriber identification number) is encrypted using home network public key 
 
+## 5G AKA procedre 
+![Screenshot from 2023-11-14 17-15-55](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/9835d5d3-cfed-400e-bd67-62e228b5fe06)
 
+- once the authentication procedure has been initiated then UDM has the SUPI and based on the SUPI , UDM decides whether it has to use 5G AKA procedure or EAP-AKA procedure(we are looking at AKA)
+- the ARPF generates the 5G home environment authentication vector cause (AUSF and UDM are in hone network)
+- the response to the random number(XRES) is calculated using the MILENAGE FUNCTION and the input to the milenage function are sequence number , random number , Authentication manaegement field and the master key (K)
+-  this milenage function has 5 subfunctions :- `MAC(generates message authentication code)` , XRES(response to random number) , IK , AK
 
+![Screenshot from 2023-11-14 17-19-30](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/cb0f8115-0224-4812-9db3-d8f82ffde458)
 
+- UDM derives XRES* as follows using HMAC-SHA-256 KDF function
 
+![Screenshot from 2023-11-14 17-23-22](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/d575c440-f60f-4a19-b030-eb33b20293f7)
 
+- UDM derives K_AUSF as follows using HMAC-SHA-256(K,S) `KDF(key derivation function)` as below 
 
+![Screenshot from 2023-11-14 17-25-37](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/0e331afc-0f54-4ce0-86f9-451cd643bb51)
 
+- AUSF derives K_SEAF from K_AUSF by passing K=K_AUSF and S= 0x6C || serving network name || length of serving network name to KDF function
+- this K_SEAF for the time being is stored in the AUSF 
 
+![Screenshot from 2023-11-14 17-27-52](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/60437617-72c2-4918-833d-b002802d7db9)
 
+- AUSF uses the XRES* to calculate the HXRES*
+- HXRES* calculation at AUSF : HXRES* is 128bit MSB of the output of SHA-256 hash, calculated by passing RAND||XRES* as input to SHA-256 algorithm 
 
+![Screenshot from 2023-11-14 17-30-35](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/65a20eaa-302c-41c4-b129-7f8a0b9a4d9e)
 
+- AUSF sends the 5G SE AV (serving environment authentication vector) to the AMF (SE cause AMF is located in the serving network of the UE)
+- SEAF(AMF) stores the HXRES* and send random number (RAND) and authentication token (AUTN) tothe ME (mobile equipment) which send it to USIM
 
+- USIM verifies the AUTN and derives the RES and keys(CK,IK)
 
+- UE uses milenage function to derive XMAC , RES , CK , IK as below
 
+![Screenshot from 2023-11-14 17-36-38](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/bef02ddb-037a-4dbb-8e5f-39a2c0260696)
 
+- if the XMAC and MAC are the same then it means its the genuine mobie network that this UE is connecting
+- also verifies that sequence number(SQN) is in the correct range
 
+- CK and IK are sent to ME and it calculates RES* and derive Kausf key , Kmac key , Kamf key
+- then ME send RES* and MAC to the AMF(SEAF)
 
+- SEAF(AMF) calculates the HRES* from RES* and compares it with HXRES* from the HXRES* it hase already stored if they are the same it means it is good
+- AUSF compares RES* with XRES* (AUSF stores XRES*) if it is the same then authentication is successful 
 
+## 5G security key hierarchy 
+![Screenshot from 2023-11-14 18-17-09](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/d8a2a73e-f6c0-44bc-b451-c7113afd2e18)
 
+- K<sub>NASint</sub> used for integrity protection of the link that is there between AMF and UE
+- K<sub>gNB</sub> handed over to gNB from AMF used to derive the following
+  -  K<sub>RRCint</sub> signaling between UE and gNB is called RRC k K<sub>RRCint</sub> does integrirty protection
+  -  K<sub>RRCenc</sub> encryption of RRC
+  -  K<sub>UPint</sub> integrity protection of data that is flowing from UE to gNB
+  -  K<sub>RRCint</sub> encryption of the flowing data  
 
+- `the AMF passes K_gNB to the master eNB/gNB`
+  - `stored there till the UE is in the state of CM-CONNECTED`
+- `the encryption and integrity keys are 256 bits long`
+  - `but are truncated to 128 bits before use , future provision 256 bits`
+- `ciphering/integrity keys called as low level keys as these keys are used just between OSI layer 1(physical layer) and layer 2(data link layer) `
 
-
-
-
-
-
-
-
-
-
-
-
-
+## ciphering/integrity algo in 5G 
+![Screenshot from 2023-11-14 18-34-22](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/41340453-dc58-4f99-9602-0ada7ebbd62a)
 
 
 
