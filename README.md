@@ -973,13 +973,13 @@ PDU session can be established for the downlink transfer of this data
      - norrow band to wideband HD voice (128 Kbps)
      - backward compatible WB-AMR(LTE)
      - robustness to delay jitter and packet loss
-  2. `IVAS (immersive voice and audio service)
+  2. `IVAS (immersive voice and audio service)`
      - mono to stereo to fully immersive for VR
      - underdevelopement 
 
 ![Screenshot from 2023-11-16 11-40-43](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/177ce6e0-3d13-41a0-86f7-43a59ffe01ca)
 
-
+- whether the voice is encoded using EVS or IVAS , this voice is carried in `RTP packets (real time protocol)` , these RTP packets are then carried to `UDP packets (user datagram protocol)` in the transport layer (L4) , these UDP packets then carried in the IP packets
 
 
 
