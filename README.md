@@ -959,14 +959,25 @@ PDU session can be established for the downlink transfer of this data
   1. voice over 5GS
   2. EPS fallback: if 5G coverage not available(handed over to LTE system)
 - VoLTE supports
-  - SRVCC (single radio voice call continuity)
+  - `SRVCC (single radio voice call continuity)`
     - active VoLTE call handed over to 2G/3G voice if no 4G coverage
-  - CSFB (ckt switched fallback)
+  - `CSFB (ckt switched fallback)`
     - call is handed to 2G/3G before te call is connected
 - with 5G core , no SRVCC or CSFB capability
   - ckt switched voice option lost 
 
+## Vo5G Codecs
+- codec is an algorithm that digitalizes and compresses the voice in the transmitter and decompresses the voice at the reciver end and gives it an analog wave form shape so that it can be heard by the person who is recieving this voice
+- Vo5G must support 2 codecs
+  1. `EVS (enhanced voice services)`
+     - norrow band to wideband HD voice (128 Kbps)
+     - backward compatible WB-AMR(LTE)
+     - robustness to delay jitter and packet loss
+  2. `IVAS (immersive voice and audio service)
+     - mono to stereo to fully immersive for VR
+     - underdevelopement 
 
+![Screenshot from 2023-11-16 11-40-43](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/177ce6e0-3d13-41a0-86f7-43a59ffe01ca)
 
 
 
