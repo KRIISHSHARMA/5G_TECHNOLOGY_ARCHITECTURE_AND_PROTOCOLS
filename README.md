@@ -1024,7 +1024,7 @@ PDU session can be established for the downlink transfer of this data
 
 ## TAS(telephony application server) in IMS
 - CSCF provide basic call processing/routing
-- TAS provides voice supplementary services
+- during call set up process S-CSCF interacts with the TAS in order to set up a voice call with the features : 
   - calling line ID hiding
   - call divert etc
 
