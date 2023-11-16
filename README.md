@@ -981,17 +981,54 @@ PDU session can be established for the downlink transfer of this data
 
 - whether the voice is encoded using EVS or IVAS , this voice is carried in `RTP packets (real time protocol)` , these RTP packets are then carried to `UDP packets (user datagram protocol)` in the transport layer (L4) , these UDP packets then carried in the IP packets
 
+## SIP(session initiation protocol)
+- sip is an application layer signaling protocol
+- used in IMS signalling
+- simple,flexible protocol for creating , modifying and terminating sessions
+- sometimes SIP packets carry `SDP(session description protocol)`
+  - IP addresses and port numbers
+  - codecs uses
+  - bandwidth required
 
+## IMS in 5G system 
+- IMS architecture remains unchanged
+- some IMS interfaces upgraded for 5G SBA(system based architecture)
+- these services have the prefix of `Ncx_IMSxxx_xxx`
 
+## CSCFs in IMS
+- IMS uses SIP signalling to setup voice calls
+- CSCFs (call session control function) are responsible for
+  - analyzing and routing the SIP based messages 
 
+![Screenshot from 2023-11-16 16-44-43](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/bcff32fc-0448-4439-afda-fa093649d1c4)
 
+## P(PROXY)-CSCF in IMS
+- `sits at the entry of the IMS function`
+- routes messages to correct IMS node
+- security (eg. flooding attacks)
+- QoS for IMS
+- forwards request to I-CSCF
 
+## I(INTERROGATING)-CSCF
+- `request for registration first comes to P-CSCF , which then is passed to I-CSCF , I-CSCF checks with the UDM whether the UE is already registered with IMS or not , if not then I-CSCF would assign S-CSCF to that user and the I-CSCF would pass that request to the corresponding S-CSCF`
+- `similary when there is call coming from another IMS network for the user in this IMS network then that call will come to I-CSCF and the I-CSCF would check with the UDM which S-CSCF the call user is assigned and after that the I-CSCF would pass that SIP call to the corresponding S-CSCF which is assingned to the called user`
+- S-CSCF ASSIGNMENT AND SESSION ROUTING
+- routing SIP requests from other SIP networks
+  - queries UDM to find S-CSCF of called sunscriber
+  - routes call to that S-CSCF
 
+## S(SERVING)-CSCF in IMS 
+- `once the registration request of the user has reached S-CSCF , it will interact with the UDM in order to get the security info of the UE and then S-CSCF will use this security info to authenticate this user in order to prove whether this is a genuine user or not`
+- `once authenticity is proven then S-CSCF will register the UE with itself and send this info to UDM`
+- `similarly when this registered UE wants to make a  call , S-CSCF interats with other apllication servers(AS) in order to set up that call in case of voice call the S-CSCF may interact with the telephony application server(TAS) in order to set up the voice call`
 
+## TAS(telephony application server) in IMS
+- CSCF provide basic call processing/routing
+- TAS provides voice supplementary services
+  - calling line ID hiding
+  - call divert etc
 
-
-
-
+![Screenshot from 2023-11-16 16-44-43](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/92529748-eac3-49f7-a1b1-5c6bb0ad03a4)
 
 
 
