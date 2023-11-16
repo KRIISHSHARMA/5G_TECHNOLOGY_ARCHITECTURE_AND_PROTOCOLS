@@ -1088,12 +1088,30 @@ PDU session can be established for the downlink transfer of this data
 -  calling UE acknowledges
 -  after this actual voice communication would take place in IMS meadia bearer that has already been established 
 
+## IMS media bearer establishment
+![Screenshot from 2023-11-16 21-03-05](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/31d2189f-85d2-4caf-95a6-b87f68497d12)
+![Screenshot from 2023-11-16 21-03-27](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/21240c2a-87ea-489f-8cf0-6680f821166c)
+![Screenshot from 2023-11-16 21-04-14](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/439a861b-b263-45ed-af6d-812084f36029)
 
+## tearing down the call (ending a call)
+- at SIP level
+  - one user sends BYE
+  - another responds with 200 OK
+![Screenshot from 2023-11-16 21-06-32](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/5a6733a7-5699-433e-ba72-52e48a18ee9b)
 
+- IMS media bearer tear down
 
+![Screenshot from 2023-11-16 21-08-22](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/fdf696c3-69fd-4b4d-8642-e6dd87e71e23)
+![Screenshot from 2023-11-16 21-08-43](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/c15b0c71-d688-4130-ad67-10963eb384f4)
+![Screenshot from 2023-11-16 21-09-09](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/6d8252a9-6ac0-4f5b-800a-7cf523e57db0)
 
+## EPS fallback 
+- specially usefull in early phase of 5G deployment where NR coverage is not sufficient
+- voice call is setup via NR and 5GC
+- UE roams to an area w//o 5G coverage
+- NR instructs triggers a handover or redirection to LTE network
 
-
+![Screenshot from 2023-11-16 21-13-16](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/aa60e613-cced-485c-9317-f67b91954e3e)
 
 
 
