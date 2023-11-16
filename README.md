@@ -1073,9 +1073,20 @@ PDU session can be established for the downlink transfer of this data
 - for Vo5G we need AS eg TAS
 - 3<sup>rd</sup> party registration notifies ASs that user is now connected and ready to communicate
 
+## SIP signalling for Vo5G
+![Screenshot from 2023-11-16 20-49-17](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/b30ae951-0c40-40bc-b13f-c4f423304ea0)
 
-
-
+- both UEs need to be registered , i.e both need to be assigned a S-CSCF in order to initiate a voice call
+-  calling UE would send an INVITE(SDP{session desc protocol} offer) to called UE { what IP address for call , what port its gonna use , which codecs to be used }
+-  called UE responds 183 session progress message(SDP answer){IP address , port number, codec}
+-  calling UE responds with PRACK(progress acknowledgement)
+-  called UE responds with 200 OK
+-  IMS meadia bearer is establishment
+-  SPD offer message sent from calling UE to called UE in order to indicate that the media bearer has been established
+-  called UE sends 200 OK message with 180 ringing(called party is ringing)
+-  once called UE picks up the phone 200 OK message is sent to calling UE
+-  calling UE acknowledges
+-  after this actual voice communication would take place in IMS meadia bearer that has already been established 
 
 
 
