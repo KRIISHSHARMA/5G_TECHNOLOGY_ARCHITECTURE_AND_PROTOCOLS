@@ -1068,10 +1068,10 @@ PDU session can be established for the downlink transfer of this data
 - UDM registers the UE against this S-CSCF then notifies S-CSCF that the registration is complete
 - S-CSCF sends ok message to UE 
 
-## 3<sup>rd</sub> party registration
+## 3<sup>rd</sup> party registration
 - we know S-CSCF can offer only basic functions such as session routing or session management but if we want supplementary services we need to invlove AS(application servers)
 - for Vo5G we need AS eg TAS
-- 3<sup>rd</sub> party registration notifies ASs that user is now connected and ready to communicate
+- 3<sup>rd</sup> party registration notifies ASs that user is now connected and ready to communicate
 
 
 
