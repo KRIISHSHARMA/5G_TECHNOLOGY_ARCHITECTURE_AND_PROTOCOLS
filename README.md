@@ -948,7 +948,7 @@ PDU session can be established for the downlink transfer of this data
 
 ![Screenshot from 2023-11-14 19-26-02](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/0e1dcc7e-0ca8-470b-a548-58e5ffcf69a2)
 
-## [VOICE_OVER_5G](
+## [VOICE_OVER_5G](VOICE_OVER_5G.md)
 
 ## intro
 - 5G voice service will be provided based in `IMS (IP multimedia subsystem)`
