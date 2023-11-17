@@ -1113,13 +1113,37 @@ PDU session can be established for the downlink transfer of this data
 
 ![Screenshot from 2023-11-16 21-13-16](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/aa60e613-cced-485c-9317-f67b91954e3e)
 
+## [UE_STATE_MANAGEMENT_IN_5G](
 
+## UE state management
+- 5G system needs to be able to keep track of each UEs
+  - availability
+  - reachability
+- keeps track of 3 states of UE
+  1. RRC radio resource control (between UE and gNB)
+  2. CM connection management `(between UE and AMF) also called non access stratum connection(NAS)`
+  3. RM registration management (between UE and AMF)
 
+![Screenshot from 2023-11-17 11-57-31](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/1a5eac62-d5ec-4624-a1a8-9dffbbd04361)
 
+## 1. RRC (radio resouce control) state
+- status of RRC connection between UE and gNB
+- RRC-idle : No RRC connection
+  - UE monitors broadcast info(that it is recieving from the gNB)
+  - cell selection/reselection
+- RRC connection required for
+  - registration
+  - voice call etc
+- RRC connected
+  - UE location known to cell level
 
+![Screenshot from 2023-11-17 12-06-23](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/1aa3b343-962d-4356-aa2c-2acdc7529e16)
 
-
-
+- RRC-inactive : intermediate state introduced in 5G(saves battery power)
+  - `RRC connection context (parameters) stored in UE and gNB`
+  - RRC connection can be ativated with minimum signalling
+  - decrease in signalling
+  - suitable for massive IOT
 
 
 
