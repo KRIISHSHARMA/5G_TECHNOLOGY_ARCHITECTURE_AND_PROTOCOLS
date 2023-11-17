@@ -1195,10 +1195,27 @@ PDU session can be established for the downlink transfer of this data
 ![Screenshot from 2023-11-17 12-39-53](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/62c48303-ec9f-48a9-a6ab-7b3024a133d0)
 ![Screenshot from 2023-11-17 12-41-08](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/b5144c8a-b8fd-4467-a4c6-c61b06f84998)
 
+## [5G_PDU_SESSION](
 
+## PDU session attributes
+- PDU session establishment not a part of the 5G registration procedure
+  - `UE can be registered without a PDU session`
+- PDU session attributes
+  - PDU session ID
+  - PDU session type ( ethernet , unstructured{`used when the network does not have any knowledge of what type of protocol is being used  at the application layer `} , IPv4 , IPv6 , IPv4v6 {`IP header size increases hence not very efficient for mMMt , uRLLC , solution is to use ethernet in which we do not use IP header , we use MAC address , source and destination addresses for tranfer  of data theough PDU session `})
+  - data network name ( name of data network to which this PDU session is connecting )
+  - network slice type  
 
+![Screenshot from 2023-11-17 19-03-43](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/19f9653f-bdfa-47b1-bc55-eed7aee88264)
 
-
+## QoS flows in PDU sessions
+- one or more QoS flows per PDU session
+- each QoS flow is characterised by the QoS rule
+  - QFI (QoS flow identifier)
+  - QoS rule identifier
+    - unique within a PDU session
+  - packet filter set (to identify packets)
+  - QoS parameters 
 
 
 
