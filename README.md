@@ -1145,10 +1145,25 @@ PDU session can be established for the downlink transfer of this data
   - decrease in signalling
   - suitable for massive IOT
 
+## UE mobility in RRC_inactive state: RAN areas
+- RAN area are very like TAs nut relevant to the RAN
+- size of RAN area
+  - min --> one cell of a TA
+  - mac --> all the cells of a TA
+- RAN areas do not overlap
+- `each RAN area is identified using RAN area ID`
 
+![Screenshot from 2023-11-17 12-13-31](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/ae4d4172-92d2-446c-be41-be6d05c927a0)
 
-
-
+## UE mobility in RRC_inactive state: RAN-based notification areas(RNAs)
+- `one or more RAN areas of same TA can be grouped as RNA(RAN-based notification areas)`
+- the 5G RAN can assign a RNA to a UE
+- in RRC_INACTIVE state,
+  - the RAN knows the RNA in which mobile is in
+  - RAN notifies the network if it moves to another RNA
+  - to contact UE , RAN pages all the cells in a RNA
+- reduced signaling : RNA updates instead of cell updates
+- in case of RRC_INACTIVE case the UE only notifies RAN about cell change if that cell belongs to a diff RNA this reduces load and save battery life of UE 
 
 
 
