@@ -1113,7 +1113,7 @@ PDU session can be established for the downlink transfer of this data
 
 ![Screenshot from 2023-11-16 21-13-16](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/aa60e613-cced-485c-9317-f67b91954e3e)
 
-## [UE_STATE_MANAGEMENT_IN_5G](
+## [UE_STATE_MANAGEMENT_IN_5G](UE_STATE_MANAGEMENT_IN_5G.md)
 
 ## UE state management
 - 5G system needs to be able to keep track of each UEs
@@ -1163,17 +1163,37 @@ PDU session can be established for the downlink transfer of this data
   - RAN notifies the network if it moves to another RNA
   - to contact UE , RAN pages all the cells in a RNA
 - reduced signaling : RNA updates instead of cell updates
-- in case of RRC_INACTIVE case the UE only notifies RAN about cell change if that cell belongs to a diff RNA this reduces load and save battery life of UE 
+- `in case of RRC_INACTIVE case the UE only notifies RAN about cell change if that cell belongs to a diff RNA this reduces load and save battery life of UE `
 
+## 2. CM (connection management) state
+- `whether an active NAS connection exists between UE and AMF or not`
+- `also called N1 signalling link`
+- CM-idle : no N1 connection between UE and AMF (`AMF knows ue registration area`)
+- CM-connected used for (AMf knows UEs current gNB)
+  - registration
+  - data transfer
+  - registration update
 
+![Screenshot from 2023-11-17 12-33-30](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/fd472942-670d-46e7-b941-5fcddd3e7140)
 
+**registraion area = UE TA list**
 
+## 3. RM (registration management) state
+- `RM state is used to indicate the status of registration of the Ue with 5G network`
+- RM-deregisterd
+  - swithed off or deregistered
+- RM-registered
+  - registered with %GC
+  - served by an AMF
+  - assigned a 5G-GUTI
+  - registration update
+    - UE enter another RA 
 
+![Screenshot from 2023-11-17 12-38-30](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/b811b679-ef14-4571-86cb-83b422653ee6)
 
-
-
-
-
+## combined state diagram 
+![Screenshot from 2023-11-17 12-39-53](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/62c48303-ec9f-48a9-a6ab-7b3024a133d0)
+![Screenshot from 2023-11-17 12-41-08](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/b5144c8a-b8fd-4467-a4c6-c61b06f84998)
 
 
 
