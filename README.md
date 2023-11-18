@@ -1217,19 +1217,58 @@ PDU session can be established for the downlink transfer of this data
   - packet filter set (to identify packets)
   - QoS parameters 
 
+## PDU session states
+![Screenshot from 2023-11-18 10-49-37](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/e02b305a-c9f3-4970-8d40-cdd74201f912)
 
+## acive PDU session
+- a PDU session consists of 3 sub-bearers
+  - data radio bearer (between UE and gNB)
+  - N3 tunnel (between gNB and UPF)
+  - N9 tunnel (between 3 UPFs)
+- bearer context
+  - `DRB-ID (data radio bearer ID)`
+  - `TEID (tunnel endpoint ID) `
+  - `UE IP address `
+- this bearer context needs to stored UPF , AMF , gNB and UE for the activaton of PDU session
 
+![Screenshot from 2023-11-18 10-51-56](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/79636c2c-10e0-4332-b99b-cf5fd9ee1ece)
 
+## Inactive PDU session
+- 5G PDU session may necome inactive
+  - inactivity timer expiration
+  - done to prolong battery life
+- `DRB and N3 tinnel are released`
+- `any further incoming data buffered in anchor UPF`
+- `bearer context retained ( in UE , AMF , UPF and gNB inorder for faster reactivation )`
+- can be reactivated by UE or AMF 
 
+## 2 main types of QoS flows 
+![Screenshot from 2023-11-18 11-04-00](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/c38509b8-a5e7-4d6d-92f0-0166608d75d3)
 
+## QoS parameters (common in both GBR and non-GBR)
+- `allocation and retention priority (ARP)`
+- `5G QoS identifier (5QI)`
 
+- GRB QoS flow
+ - `guaranteed flow bit rate (GFBR)`
+ - `maximum flow bit rate (MFBR)`
+ - notification control
 
+- non GBR QoS flow
+  - `per session aggregate maximum bit rate ( session AMBR )`
+  - `per UE aggregate maximum bit rate (UE-AMBR)`
+  - `reflective QoS attribute (RQA)`
 
-
-
-
-
-
+## ARP (allocation and retention priority)
+- competition for resources during busy period
+- 5GC will use ARP to
+  - establish QoS flow with higher ARP
+  - reject creation of QoS flow with lower ARP
+- in overload, QoS flow with a low ARP will be produced
+- ARP priority
+  - ARP priority: 1-15
+  - pre-emption capability: yes/no
+  - pre-emption vunerability: yes/no
 
 
 
