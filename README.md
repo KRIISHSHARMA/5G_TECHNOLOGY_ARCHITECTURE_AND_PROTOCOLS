@@ -1195,7 +1195,7 @@ PDU session can be established for the downlink transfer of this data
 ![Screenshot from 2023-11-17 12-39-53](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/62c48303-ec9f-48a9-a6ab-7b3024a133d0)
 ![Screenshot from 2023-11-17 12-41-08](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/b5144c8a-b8fd-4467-a4c6-c61b06f84998)
 
-## [5G_PDU_SESSION](
+## [5G_PDU_SESSION](5G_PDU_SESSION.md)
 
 ## PDU session attributes
 - PDU session establishment not a part of the 5G registration procedure
