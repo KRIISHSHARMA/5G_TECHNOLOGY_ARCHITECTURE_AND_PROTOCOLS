@@ -1267,11 +1267,16 @@ PDU session can be established for the downlink transfer of this data
 - in overload, QoS flow with a low ARP will be produced
 - ARP priority
   - ARP priority: 1-15
-  - pre-emption capability: yes/no
-  - pre-emption vunerability: yes/no
+  - pre-emption capability: yes/no (whether other QoS flows that have a lower ARP priority they can be dropped in favour of this QoS flow or not)
+  - pre-emption vunerability: yes/no ( defines whether this QoS flow can be dropped in favour of other QoS flows that have a higher ARP value )
+    
+![Screenshot from 2023-11-22 18-59-46](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/80eea8ef-99de-4461-b9b4-50630e5a4ecb)
 
-
-
+- `ARP parameter values for a specific subscriber are stored in the UDM`
+- `from the UDM given to SMF`
+- `how these parameters are gonna be used  it is defined in the general ARP policy for network and this policy is defined the PCF`
+- `SMF takes input from UDM and PCf and based upon this input the SMF would decide which QoS flows it is going to create`
+- `in order to create a QoS flow SMf needs to coordinate with the AMF and UPF`
 
 
 
