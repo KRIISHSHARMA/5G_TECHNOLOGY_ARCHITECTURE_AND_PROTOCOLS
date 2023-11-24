@@ -1388,7 +1388,12 @@ PDU session can be established for the downlink transfer of this data
 ## reference frequency calculation F<sub>ref</sub>
 ![Screenshot from 2023-11-24 19-47-28](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/e48cd536-6c5e-42f2-9935-e5a939341c92)
 
-- global raster is the min difference in terms of frequency that can be there between reference frequencies 
+- global raster is the min distance in terms of frequency that can be there between reference frequencies
+- channel raster is the minimum distance between center frequencies of two channels 
 
+## Difference between global and channel Raster 
+- above 3 GHz , every refernce frequency can act as the center frequency for the channel that means channel raster and global raster is same
+- below 3 GHz , the global raster is 5KHz that means minimum distance between 2 between two reference frequenies is 5KHz but channel raster can be 15KHz or 100KHz
 
+![Screenshot from 2023-11-24 21-12-46](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/d122dd44-b9eb-4c9d-ac4b-895b19b6e3ab)
 
