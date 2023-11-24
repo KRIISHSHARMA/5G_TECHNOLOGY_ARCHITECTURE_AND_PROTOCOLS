@@ -1423,6 +1423,7 @@ PDU session can be established for the downlink transfer of this data
 - while in the time domain we have frames each frame is of 10ms and it has 10 subframes of 1ms each
 - if we have SCS of 60 KHz we will have 4 slots per subframe (2^2)
 - `the normal CP is 14 symbols per slot in time domain and 12 subcarriers in frequency domain`
+- The 3GPP documents describes a resource block to be a group of resource elements spanning 12 consecutive subcarriers in the frequency domain and one slot in the time domain.
 
 ![Screenshot from 2023-11-24 21-37-03](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/12916721-710a-4bdf-868b-6a41079150e7)
 
@@ -1484,7 +1485,8 @@ PDU session can be established for the downlink transfer of this data
 - purple colured PC , these physical channels take info from 1st layer and transmit it as EM signals over air interface or vice versa
 - orange coloured PC , these physical channels take info from 2nd layer or higher send info over air interface or vice versa  
 
-
+- first looking at yellow coloured channels
+  1. DM-RS(demodulation-reference signal) : almost all purple and orange coloured physical channels that are carrying some info have an associated DM-RS (exception : PRACH(physical random access channel)) therefore it is an important physical signal . DM-RS helps the receiver to demodulate the incoming signal . 
 
 
 
