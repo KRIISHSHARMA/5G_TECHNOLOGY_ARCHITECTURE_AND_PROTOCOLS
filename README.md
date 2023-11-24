@@ -1366,6 +1366,10 @@ PDU session can be established for the downlink transfer of this data
 - as we increase SCS from 15KHz to 30 KHz we see that we can now use 60MHz or more bandwidths but `they are less than the 15KHz SCS`
 - in 60KHz spacing 5MHz is not available cause 5MHz channel bandwidth is small for this 60KHz SCS 
 
+## maximum transmission bandwidth configuration (FR2)
+- channel bandwidth is between 50 and 400 MHz in frequency range 2
+
+![Screenshot from 2023-11-24 19-30-12](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/24361027-9063-4f02-be2b-529e03839529)
 
 
 
