@@ -1478,8 +1478,11 @@ PDU session can be established for the downlink transfer of this data
 - for eg **PBCH (physical broadcast channel)** is taking info as bits from the BCH and it is then transmiting that info over air interface
 - **PUSCH(physical UL shared channel)** receives info as EM signals and gives it to UL-SCH 
 
+![Screenshot from 2023-11-24 22-47-06](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/bee62a00-aad2-47e6-a74b-2620cb0f7e09)
 
-
+- yellow colured physicals channels called physical signals do not take any info from physical layer or any higher layer and sending on the air interface
+- purple colured PC , these physical channels take info from 1st layer and transmit it as EM signals over air interface or vice versa
+- orange coloured PC , these physical channels take info from 2nd layer or higher send info over air interface or vice versa  
 
 
 
