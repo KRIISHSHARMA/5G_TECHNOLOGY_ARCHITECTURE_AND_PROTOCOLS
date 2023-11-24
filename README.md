@@ -1337,15 +1337,34 @@ PDU session can be established for the downlink transfer of this data
 - otherwise , it waits for a time equal to the RQoS timer
   - once the timer expires the UE deletes this newly created QoS flow in the UL
 
+## [
+
+## channel and trasmission bandwidths
+- the radio bandwidth of the channel that is being used by an operator in a given gNB depends upon 2 factors
+  1. how much total bandwidth has been assigned by the regulator to the operator
+  2. second , out of that total bandwidth how much bandwidth has been used by the operator in this gNB , that bandwidth is called **channel bandwidth(MHz)**
+ 
+- this channel bandwidth includes guardbands so that the transmission that are being made in this channel do not interfare with the adjacent frequency channels 
+[look in to this](https://dsp.stackexchange.com/questions/78694/what-is-the-difference-between-a-guard-band-and-a-cyclic-prefix-in-ofdm#:~:text=In%20contrast%20the%20guard%20interval,generated%20in%20the%20modulation%20process.)
 
 
+- when you remove gaurdbands from channel bandwidths you get **Transmission Bandwidth Configuration N<sub>RB</sub> (total number of available resource block that are there in a gNB that can be used for transmission) [RB]**
+- out of that Transmission Bandwidth Configuration at a time there may be a subset of the resource block that are actually being used for the transmission
+- these Active resouce blocks depend on time of day (more when more calls , less at night necause of less load)
+  
+![Screenshot from 2023-11-24 19-14-41](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/20f6c94b-68c2-435a-8d88-4e1754ad93dd)
+
+## maximum transmission bandwidth configuration (FR1)
+- channel bandwidth lies between 5 and 100 MHZ in frequency range 1
+- and if we are using min bandwidth as the gaurdband so the maximum transmission bandwidth or in other word maximum number of resource blocks that are available for transmission they depend upon channel bandwidth
+
+![Screenshot from 2023-11-24 19-21-52](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/3fa92aef-3742-418a-8983-8c604fefaca9)
 
 
-
-
-
-
-
+- as we increase the bandwidth the resource blocks are increasing
+- we cannot use the 15KHz with 60 MHZ bandwidth cause this is a very high bandwidth
+- as we increase SCS from 15KHz to 30 KHz we see that we can now use 60MHz or more bandwidths but `they are less than the 15KHz SCS`
+- in 60KHz spacing 5MHz is not available cause 5MHz channel bandwidth is small for this 60KHz SCS 
 
 
 
