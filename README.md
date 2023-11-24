@@ -1,4 +1,4 @@
-# 5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS
+![image](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/23c1150c-a276-416f-8030-4fa324a9d882)# 5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS
 
 ## [ACRONYMS](ACRONYMS.md)
 
@@ -1372,11 +1372,23 @@ PDU session can be established for the downlink transfer of this data
 ![Screenshot from 2023-11-24 19-30-12](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/24361027-9063-4f02-be2b-529e03839529)
 
 
+## Reference frequency (F<sub>ref</sub>)
+- in individual channel there is a centre frequency of this channel which is called the Reference frequency (F<sub>ref</sub>)
+- this reference frequency has an assosiated number which is called NR-Absolute Radio Frequency channel number (N<sub>ref</sub>)
+- **NR-ARFCN** is used to identify this channel
 
+![Screenshot from 2023-11-24 19-41-47](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/6a40533c-51c6-4376-993b-0b2326cb5ada)
 
+- the operator may decide instead of using a channel in a gNB it wants to use another channel in that gNB only
+- but in these 2 channels the bandwidth is the same but the frequencies are different as a result the center frequency or refernece frequency has changed
+- therefore associated NR-ARFC will also changed
 
+![Screenshot from 2023-11-24 19-45-44](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/62ef6f50-5c65-461a-b380-1d8c49f52a75)
 
+## reference frequency calculation F<sub>ref</sub>
+![Screenshot from 2023-11-24 19-47-28](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/e48cd536-6c5e-42f2-9935-e5a939341c92)
 
+- global raster is the min difference in terms of frequency that can be there between reference frequencies 
 
 
 
