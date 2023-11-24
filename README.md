@@ -1471,7 +1471,12 @@ PDU session can be established for the downlink transfer of this data
 
 ![Screenshot from 2023-11-24 22-20-54](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/5b3225a8-f30b-4c31-a591-21815fb7e751)
 
-
+## 5G NR channels (Physical channels)
+- uptill now info was being carried out in the form of bits
+- in order to transmit that info over air interface we need to convert that info into EM signal
+- a physical channel that has certain phyical layer procedures applied to it so that it can carry that info in form of EM signal
+- for eg **PBCH (physical broadcast channel)** is taking info as bits from the BCH and it is then transmiting that info over air interface
+- **PUSCH(physical UL shared channel)** receives info as EM signals and gives it to UL-SCH 
 
 
 
