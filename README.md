@@ -1397,3 +1397,97 @@ PDU session can be established for the downlink transfer of this data
 
 ![Screenshot from 2023-11-24 21-12-46](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/d122dd44-b9eb-4c9d-ac4b-895b19b6e3ab)
 
+
+## Bandwidth part (BWP)
+
+- in LTE , UE's radio bandwidth usually same as eNB bandwidth
+- in 5G , UE,s radio bandwidth can be less than gNB bandwidth
+- BWP is a contiguous set of RBs
+  - subset of the base stations transmission bandwidth configuration
+
+![Screenshot from 2023-11-24 21-22-40](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/1c3d119d-b985-4efd-a94e-038434f2ba65)
+
+- numerology = SCS 
+- UE can be assigned
+  - upto 4 BWPs in downlink
+  - upto 4 BWPs in uplink
+- at one time
+  - only one BWP ative in uplink
+  - and one BWP cative in downlink
+- BWPs can overlap but active at different time 
+
+![Screenshot from 2023-11-24 21-24-54](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/7ff3b5bb-a7fe-4043-a9e0-f34bd3cac8c6)
+
+## Resource Grid 
+- the total bandwidth that is there in a cell is divided into resouce blocks in frquency domain
+- while in the time domain we have frames each frame is of 10ms and it has 10 subframes of 1ms each
+- if we have SCS of 60 KHz we will have 4 slots per subframe (2^2)
+- `the normal CP is 14 symbols per slot in time domain and 12 subcarriers in frequency domain`
+
+![Screenshot from 2023-11-24 21-37-03](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/12916721-710a-4bdf-868b-6a41079150e7)
+
+- each cell/gNB can have multiple resouce grids (eg one resource grid for UL and one for DL)
+- there is one resource grid for each combination of
+  - direction(UL or DL)
+  - antenna port in MIMO
+  - SCS configuration
+
+## 5G NR Model for Air interface channels 
+- 3 channels
+  - physical
+  - transport
+  - logical 
+
+![Screenshot from 2023-11-24 21-51-53](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/6ab5dc7f-4fc6-4ce0-9f52-94a26c1f1f19)
+
+## 5G NR logical channels 
+- black arrow --> channels in DL direction
+- red aarow --> channels in UL diretion 
+
+![Screenshot from 2023-11-24 21-56-05](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/020732cb-1e6b-45a9-b14a-e486dae19033)
+![Screenshot from 2023-11-24 21-56-23](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/95184bdb-f70d-4a9e-8d37-af305c6a17bf)
+
+## Dedicated , Common and Broadcast Logical Channels
+- Dedicated Channels(P2P channel)
+  - channels reserved for a single user
+    - **DTCH (dedicated trafiic channel)**(in case of call)
+    - **DCCH (dedicated control channel)**(signalling to support this call would be carried on by DCCH)
+
+- Common Channels
+  - channel shared between users
+  - no reserved channels
+    - **PCCH (paging control channel)**(incoming call , gNB uses PCCH to page the UE)
+    - **CCCH (common control channel)**(used by UE in order to initiate a call with the network)
+
+- Broadcast Channels
+  -  channels for broadcasting to user in a cell
+    - **BCCH** (broadcasting control channel)(broadcast system info to UE that are there in the cell)
+
+## 5G NR channels (Transport channels)
+- PCCH is mapped by **PCH (paging channel)**  
+- BCCH mapped by **BCH (broadcast channel)**
+- CCCH , BCCH , DTCH and DCCH are multiplexed on the **DL-SCH(DL-shared channel)**
+- in UL **UL-SCH(UL-shared channel)**  is being demultiplexed into CCCH,DCCH,DTCH
+
+![Screenshot from 2023-11-24 22-20-54](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/5b3225a8-f30b-4c31-a591-21815fb7e751)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
