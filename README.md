@@ -1611,11 +1611,18 @@ PDU session can be established for the downlink transfer of this data
 - gNB can ACK this info using **DCI** `that would be ther in the next` **PDCCH** 
 
 ## DCI (Downlink Control Information) 
-- **DCI** used to schedule 
+- DCI helps the base station and user devices coordinate when and how data should be transmitted and received.
+- **DCI** used to schedule
+- modulation scheme and Coding Rate
+  - BPSK , QPSK , 16QAM , 64QAM , 256QAM(8bits/symbol)
+  - indicates new transmission or re-transmission (In simple terms, DCI scheduling helps manage whether the communication system is sending something for the first time or if it's re-sending information that may not have been successfully received in earlier attempts.)
 
-
-
-
+## UCI (UL control information)
+- UCI
+  - ACK/NAK for DL transmission
+  - `Make UL sceduling request`
+  - **CQI** (channel quality information) : feedback about DL subcarriers by the  UE to the cell using **UCI** , this feedaback is in form of **CQI**
+- **UCI** is carried on **PUCCH** but can be arried by **PUSCH** too (if present) 
 
 
 
