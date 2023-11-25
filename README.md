@@ -1014,7 +1014,7 @@ PDU session can be established for the downlink transfer of this data
 - `similary when there is call coming from another IMS network for the user in this IMS network then that call will come to I-CSCF and the I-CSCF would check with the UDM which S-CSCF the call user is assigned and after that the I-CSCF would pass that SIP call to the corresponding S-CSCF which is assingned to the called user`
 - S-CSCF ASSIGNMENT AND SESSION ROUTING
 - routing SIP requests from other SIP networks
-  - queries UDM to find S-CSCF of called sunscriber
+  - queries UDM to find S-CSCF of called subscriber
   - routes call to that S-CSCF
 
 ## S(SERVING)-CSCF in IMS 
@@ -1038,7 +1038,7 @@ PDU session can be established for the downlink transfer of this data
 `PDN(public data network)`
 
 ## PDU Session for IMS connectivity 
-- registration : one QoS flow ( used to regidter UE to IMS system)
+- registration : one QoS flow ( used to register UE to IMS system)
 - voice call : two QoS flow
   - QoS flow 1 (default rule) for IMS signalling(`to generate , maintain and establish the voice call`)
   - QoS flow 2 used as IMS media bearer(`actual packets of voice carried by this one`) , QoS parameter depends on voice call(std,high definition etc)
@@ -1061,7 +1061,7 @@ PDU session can be established for the downlink transfer of this data
 - in the first step UE sends a registration request to proxy-CSCF
 - P-CSCF will then relay this meassage to INTEROGATING-CSCF , now I-CSCF will use `Ncx_IMSRegistration_Get` function to querry the UDM , wether this UE is already registered to the IMS system or not , if not I-CSCF will select a S-CSCF for the UE and send this request to S-CSCF
 - now S-CSCF will use registraion service of the SBA(service based architechure)(`NCx_IMSRegistration_register`) in order to send the registration request to the UDM
-- the UDM will temp store this UE againse this S-CSCF and smilarlly the S-CSCF will request the authetication information for this UE using `Ncx_IMSAuthentication_Get` service
+- the UDM will temp store this UE against this S-CSCF and smilarlly the S-CSCF will request the authetication information for this UE using `Ncx_IMSAuthentication_Get` service
 - once S-CSCF gets this info , it will challenge the UE using this authentication info so that UE proves its genuiness
 - UE gives response by sending authentication response
 - if is successful then this service-CSCF tells UDM about this success
@@ -1413,7 +1413,7 @@ PDU session can be established for the downlink transfer of this data
   - upto 4 BWPs in uplink
 - at one time
   - only one BWP ative in uplink
-  - and one BWP cative in downlink
+  - and one BWP ative in downlink
 - BWPs can overlap but active at different time 
 
 ![Screenshot from 2023-11-24 21-24-54](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/7ff3b5bb-a7fe-4043-a9e0-f34bd3cac8c6)
@@ -1500,7 +1500,7 @@ PDU session can be established for the downlink transfer of this data
 3. scheduling of data transmissions
 4. paging
 
-## 1. 5G NR Cell acquistion procedure 
+## 5G NR Cell acquistion procedure 
 - this procedure is run by a UE when you power on your UE
 - cell acquisition is procedure in which
   - UE discovers nearby cells
@@ -1624,11 +1624,19 @@ PDU session can be established for the downlink transfer of this data
   - **CQI** (channel quality information) : feedback about DL subcarriers by the  UE to the cell using **UCI** , this feedaback is in form of **CQI**
 - **UCI** is carried on **PUCCH** but can be arried by **PUSCH** too (if present) 
 
+## Coreset (revisited) 
+- we know that **PDCCH** is located in a region called as the **coreset** and the **PDCCH** only in DL which means **coreset** also exists in the DL
 
+- `Max 3 CORESETs can be configured for an active downlink BWP`
+- A UE can have 4 BWPs and each have 3 CORESET (total 12 CORESETs)
+- CORESETs are active only when their associated BWP is active , **with the exception of CORESET 0(carriers minimum system info)** 
 
+## Paging 
+- whenever there is a incoming call for the UE , the gNB needs to page the UE , and for that paging **PCCH** (paging control channel) is used
+- the **PCCH** is mapped on the **PCH**(paging channel) and  then mapped on **PDSCH**
+- when there is an incoming call for UE and it is paged by the gNB the UE responds by the **RACH** procedure and establishes connection with the gNB to get connected with that call 
 
-
-
+![Screenshot from 2023-11-25 20-48-15](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/477516e2-17c2-429d-a1d5-6767568d3d60)
 
 
 
