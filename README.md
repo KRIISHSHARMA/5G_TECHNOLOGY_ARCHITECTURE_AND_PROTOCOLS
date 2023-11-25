@@ -1592,14 +1592,26 @@ PDU session can be established for the downlink transfer of this data
 - UE then ACK it using **PUCCH**
 - using **RRC** connection the UE registers itself with the cell 
 
+## scheduling data transmission 
+- for ex cell has some data or signalling that it needs to transit to the UE
+- first the cell will use **PDCCH** to assign a **PDSCH** to this UE , using this **PDSCH** , the cell would then send the data or signalling to the UE
+- Then the UE will respond using the **UCI**(UL control information) to the cell , if this UE needs/wants to the send some data or signalling to the cell , then it can make that request in the **UCI**
+- As a result of this request the cell would then use **PDCCH** to assign **PUSCH**
+- using this  **PUSCH** UE can send data or signalling to thr cell
+- and then the cell can ACK this using the **PDCCH**
 
+![Screenshot from 2023-11-25 18-24-49](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/a4c24555-c74f-412b-ab2f-9c0235ed5d2d)
 
+![Screenshot from 2023-11-25 18-28-56](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/78fbe42e-5ecc-49cd-a3af-a4a624e15b51)
 
+- gNB is using the **DCI**(DL control info) that is there in **PDCCH** to assign the **PDSCH**
+- **PDSCH** carries data or signalling from gNB to UE
+- the UE can then ACK using **UCI**
+- similarly **DCI** on **PDCCH** assigns **PUSCH** using which UE can send data or signlling to gNB
+- gNB can ACK this info using **DCI** `that would be ther in the next` **PDCCH** 
 
-
-
-
-
+## DCI (Downlink Control Information) 
+- **DCI** used to schedule 
 
 
 
