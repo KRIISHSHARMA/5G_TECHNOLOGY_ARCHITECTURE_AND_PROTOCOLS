@@ -1568,9 +1568,29 @@ PDU session can be established for the downlink transfer of this data
   - location of other SIBs
   - PLMN(identity of mobile network whom this cell belongs to) , TAC(tracking area code where the UE is currently located) etc
 
+![Screenshot from 2023-11-25 12-41-28](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/d3e93911-9f9a-4646-bf39-64acbe97f62a)
 
+## Initial Access (RACH Procedure) 
+- once the UE has decided which gNB it wants to register then it initiates that process by RACH procedure 
 
+![Screenshot from 2023-11-25 15-47-17](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/66b6e6f5-24cb-4ba2-b694-6dab17d0ea13)
 
+- (msg1) At the start of the initial process UE sends a preamble to gNB using **PRACH** (physical random access channel) .
+
+- (msg2) then the cell responds with **PDCCH** and using **PDCCH** the cell assigns a **PDSCH** in the DL
+- and on this**PDSCH** there is the response of the cell to the preamble or `random access response` and in this response the cell assigns
+  - A temp **C-RNTI**
+  - A UL scheduling grant
+  - Timing advance , will enable the UE to send its transmissions at a time that its UL transmission is synchronized with the UL transmissions of the other users
+
+- (msg3) Once the UE receives this message the UE responds using the **PUSCH**
+- In this response , the UE requests a RRC setup connection and this request will also contain the **UE ID** (no collision)
+
+- (msg4) When msg3 is received by the cell , it will again use **PDCCH** to assign **PDSCH**
+- In this **PDSCH** there will be **RRC** connection setup message , means **RRC**(radio resource connection) can now be set up
+
+- UE then ACK it using **PUCCH**
+- using **RRC** connection the UE registers itself with the cell 
 
 
 
