@@ -1486,8 +1486,11 @@ PDU session can be established for the downlink transfer of this data
 - orange coloured PC , these physical channels take info from 2nd layer or higher send info over air interface or vice versa  
 
 - first looking at yellow coloured channels
-  1. DM-RS(demodulation-reference signal) : almost all purple and orange coloured physical channels that are carrying some info have an associated DM-RS (exception : PRACH(physical random access channel)) therefore it is an important physical signal . DM-RS helps the receiver to demodulate the incoming signal . 
-
+  1. DM-RS(demodulation-reference signal) : almost all purple and orange coloured physical channels that are carrying some info have an associated DM-RS (exception : PRACH(physical random access channel)) therefore it is an important physical signal . DM-RS helps the receiver to demodulate the incoming signal .
+ 
+  2. SRS (sounding refernce signal) : transmitted by the UE on differnet subcarrier frequencies in the UL towards the gNB , gNB makes quality measurement on those subcarriers , then gNB comes to know what are the subcarriers that are best for this UE for UL transmission . based on this gNODEB schudeles RB foe uplink transmssion and modulation scheme (256QAM {8 bits transmitted per RE/1 OFDM symbol} , 62QAM {6 bits transmitted per RE/1 OFDM symbol}, etc) . `helps the gNB receiver to determine which UL subcarriers are best for the UE`
+ 
+  3. CSI-RS (channel state information-reference signal) : helps the UE receiver to determine the best downlink subcarriers , the best downlink modulation scheme . it is transmitted by the gNB towards the UE in the DL on different subcarrier frequencies and then UE makes quality measurments on these subcarriers , based on that the UE decides that which subcarriers or physical resource blocks are good for DL transmission and what is the best modulation scheme that can be used on those subcarriers and the UE sends this info back to gNB as UL-control inforamtion and based on that info gNB can decide what RBs it can use in the DL and modulation scheme on those RBs 
 
 
 
