@@ -1538,8 +1538,15 @@ PDU session can be established for the downlink transfer of this data
 
 ![Screenshot from 2023-11-25 10-21-56](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/634b4a19-088c-4eff-8c3d-71db11013b3e)
 
+## Cell Acquisition : physical cell ID (PCI)
+- In the next step UE determines the **Physical cell ID(PCI)**
+- inorder to determine PSI the UE needs to determine the **PSS** and the **SSS**
+-  **PSS** consists of 3 possible sequences , numbered 0-2 , determined by the UE as NID(2)
+-  **SSS** consists of 336 possible sequences , numbered 0-335 , determined by the UE as NID(1)
+-  once the NID(1) and (2) are determined they are put into the formula and generate the **PCI**
+-  in 5G PCI is a number that can lie between 0-1007 
 
-
+![Screenshot from 2023-11-25 10-35-57](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/ef891376-7887-488c-8a02-79a0a2485ed0)
 
 
 
