@@ -1490,12 +1490,28 @@ PDU session can be established for the downlink transfer of this data
  
   2. SRS (sounding refernce signal) : transmitted by the UE on differnet subcarrier frequencies in the UL towards the gNB , gNB makes quality measurement on those subcarriers , then gNB comes to know what are the subcarriers that are best for this UE for UL transmission . based on this gNODEB schudeles RB foe uplink transmssion and modulation scheme (256QAM {8 bits transmitted per RE/1 OFDM symbol} , 62QAM {6 bits transmitted per RE/1 OFDM symbol}, etc) . `helps the gNB receiver to determine which UL subcarriers are best for the UE`
  
-  3. CSI-RS (channel state information-reference signal) : helps the UE receiver to determine the best downlink subcarriers , the best downlink modulation scheme . it is transmitted by the gNB towards the UE in the DL on different subcarrier frequencies and then UE makes quality measurments on these subcarriers , based on that the UE decides that which subcarriers or physical resource blocks are good for DL transmission and what is the best modulation scheme that can be used on those subcarriers and the UE sends this info back to gNB as UL-control inforamtion and based on that info gNB can decide what RBs it can use in the DL and modulation scheme on those RBs 
+  3. CSI-RS (channel state information-reference signal) : helps the UE receiver to determine the best downlink subcarriers , the best downlink modulation scheme . it is transmitted by the gNB towards the UE in the DL on different subcarrier frequencies and then UE makes quality measurments on these subcarriers , based on that the UE decides that which subcarriers or physical resource blocks are good for DL transmission and what is the best modulation scheme that can be used on those subcarriers and the UE sends this info back to gNB as UL-control inforamtion and based on that info gNB can decide what RBs it can use in the DL and modulation scheme on those RBs
+ 
+  4. PT-RS (phase tracking reference signal) : helps the receiver to compensate for phase errors at high radio frequencies (mmwave) , and maintain phase synchronization 
 
+## Procedures to Understand 5G channels 
+1. cell aquisition
+2. intial access
+3. scheduling of data transmissions
+4. paging
 
+## 1. 5G NR Cell acquistion procedure 
+- this procedure is run by a UE when you power on your UE
+- cell acquisition is procedure in which
+  - UE discovers nearby cells
+  - UE decodes the cell ID and other system info in those cells
+  - in a cell this system info is being transmitted by the **BCCH**(logical channel) this logiacal channel is the mapped to the transport channel of **BCH** and this BCH is then mapped to the **PBCH** and associated with this PBCH you have **PSS**(primary synchronization sequence) and **SSS**(secondary synchronization sequence) and you have the physical signal **DM-RS**
+  - togther all these physical channels are called as the **SSB** (syncronization signal block)
+  - this SSB are transmitted on some specific frequencies and those are called **Global synchronization channel numbers**
+  - once powered on UE tunes to those specific frequencies called **Global synchronization channel numbers**
+  - UE then tries to detect synchronization signal block **SSB**
 
-
-
+![Screenshot from 2023-11-25 09-52-19](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/68e83c3d-52e7-411c-be24-25c37b00895d)
 
 
 
