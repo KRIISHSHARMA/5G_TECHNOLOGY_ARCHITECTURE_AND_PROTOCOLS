@@ -1514,6 +1514,105 @@ PDU session can be established for the downlink transfer of this data
 ![Screenshot from 2023-11-25 09-52-19](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/68e83c3d-52e7-411c-be24-25c37b00895d)
 
 
+## Cell Acquisition : BEAM SWEEPING
+- in a cell you have different beems that are transmiited over different directions
+- these SSB blocks are transitted one after the another called **SSB burst**
+- this procedure of transmitting SSB blocks one after another on the beams in different directions is called beam sweeping procedure
+- each SSB blocks in SSB burst has a unique SSB index
+- no. of SSBs in burst (as frequency increases the beams become more sharp the number of beams in a cell increase hence no. of SSB blocks depend on frequency)
+  - 4(below 3 GHz)
+  - 8(3 to 6 GHz)
+  - 64(6 to 52.6 GHz)
+
+![Screenshot from 2023-11-25 10-06-33](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/a4e5abda-433c-423b-9370-4cff28ca0075)
+
+## Cell Acquisition : SSB Block 
+- SSB block is mapped on the resource grid like this
+
+![Screenshot from 2023-11-25 10-14-35](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/a789d10c-6929-45c4-bd31-b0257b2b3e83)
+
+- in the PBCH within each [BRB](https://www.telecomtrainer.com/brb-basic-resource-block/) DM-RS is being transmitted in every 4th subcarrier
+- UE measure power of SSBs on DM-RS to determine which is the most powerfull beam
+  - part of SSB index carried by DM-RS(& other by PBCH)
+- this SSB block is modulated using **QPSK** modulation
+
+![Screenshot from 2023-11-25 10-21-56](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/634b4a19-088c-4eff-8c3d-71db11013b3e)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
