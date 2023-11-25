@@ -1337,7 +1337,7 @@ PDU session can be established for the downlink transfer of this data
 - otherwise , it waits for a time equal to the RQoS timer
   - once the timer expires the UE deletes this newly created QoS flow in the UL
 
-## [
+## [5G_NR_AIR_INTERFACE](5G_NR_AIR_INTERFACE.md)
 
 ## channel and trasmission bandwidths
 - the radio bandwidth of the channel that is being used by an operator in a given gNB depends upon 2 factors
