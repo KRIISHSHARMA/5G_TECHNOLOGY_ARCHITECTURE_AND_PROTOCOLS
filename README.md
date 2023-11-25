@@ -1548,12 +1548,25 @@ PDU session can be established for the downlink transfer of this data
 
 ![Screenshot from 2023-11-25 10-35-57](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/ef891376-7887-488c-8a02-79a0a2485ed0)
 
+## Cell Acquisition : physical broadband channel (PBCH)
+- UE decodes the PBCH to get **MIB**(master info block)
+- **MIB**contains information about
+  - cell barred or not ?
+  - system frame number **SFN**
+  - **DM-RS configuration for PDSCH for SIB1**
+  - **configuration and location of PDCCH** (CORESET0) 
 
+## Cell Search : control resource set (CORESETs)
+![Screenshot from 2023-11-25 12-29-16](https://github.com/KRIISHSHARMA/5G_TECHNOLOGY_ARCHITECTURE_AND_PROTOCOLS/assets/86760658/ce76acb5-9f65-4bbf-ba93-31a8aa09d2c1)
 
-
-
-
-
+## Cell Acquisition : System information block 1 (SIB1)
+- SIB1 contains the remaining minimum system information
+- this SIB1 is carried on the **PDSCH**
+- **PDSCH** location on resource grid is in the **DCI**(downlink control information) and this **DCI** is carried in the **PDCCH** that is on the CORESET0
+- after decoding SIB1 , UE gets
+  - parameters for cell access/connection
+  - location of other SIBs
+  - PLMN(identity of mobile network whom this cell belongs to) , TAC(tracking area code where the UE is currently located) etc
 
 
 
